@@ -3,6 +3,13 @@ const geckodriver = require('geckodriver');
 
 module.exports = {
   silent: !process.env.NIGHTWATCH_VERBOSE,
+  eyes: {
+    appName: 'your app name',
+    enableEyesLogs: true, // this will enable the SDK's logs and write them to the console
+    useVisualGrid: true, // this will utilize the Ultrafast grid
+    concurrency: 5
+  },
+  custom_commands_path: ['node_modules/@applitools/eyes-nightwatch/commands'],
   test_settings: {
     default: {
       webdriver: {
