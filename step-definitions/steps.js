@@ -7,7 +7,7 @@ Given(/^I open Google`s search page$/, async () => {
 });
 
 Then(/^visual test Google$/, async () => {
-  return client.url('http://google.com')
+  return client
     .eyesOpen('google.com website', 'My first Nightwatch test!')
     .eyesCheck(Target.window().fully())
     .eyesClose()
